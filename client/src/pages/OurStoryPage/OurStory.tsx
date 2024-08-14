@@ -1,8 +1,9 @@
-import React from 'react'
-
+import "./ourstory.css"
 const OurStory = () => {
   return (
-    <div>OurStory</div>
+    <div className="our-story-container">
+      <h1>Our Story Page</h1>
+    </div>
   )
 }
 

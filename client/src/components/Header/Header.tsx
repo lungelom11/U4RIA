@@ -1,18 +1,29 @@
 import Logo from "../Logo/Logo";
 import "./header.css"
 import { FaCartShopping } from "react-icons/fa6";
+import { CiMenuFries  } from "react-icons/ci";
+import {Link} from "react-router-dom";
 
+interface HeaderProps {
+  toggle: () => void;
+}
 
-const Header = () => {
+const Header: React.FC<HeaderProps> = ({ toggle }) => {
   return (
     <nav>
-      <Logo />
+      <div className="burger-menu">
+        <CiMenuFries onClick={toggle}  />
+      </div>
+
+      
+       <Logo />
+      
       <div className="menu">
         <ul>
-          <li className="menu-item active">Home</li>
-          <li className="menu-item">Our Story</li>
-          <li className="menu-item">Our Mission</li>
-          <li className="menu-item">Our Product</li>
+          <Link to="/"><li className="menu-item active">Home</li></Link>
+          <Link to="/our-story"><li className="menu-item">Our Story</li></Link>
+          <Link to="/our-mission"><li className="menu-item">Our Mission</li></Link>
+          <Link to="/our-products"><li className="menu-item">Our Products</li></Link>
         </ul>
       </div>
 

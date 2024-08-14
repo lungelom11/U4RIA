@@ -10,6 +10,9 @@
     font-weight: 400;
   }
 
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -20,7 +23,15 @@
 #root {
     max-width: 1280px;
     margin: 0 auto;
-    width: 100%;
+    /* width: 100%; */
+    position: relative;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 /* .read-the-docs {

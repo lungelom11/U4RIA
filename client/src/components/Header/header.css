@@ -6,6 +6,21 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 2rem;
+    width: 100%;
+    z-index: 1000;
+}
+.burger-menu{
+    font-size: 2rem;
+    display: block;
+}
+.menu{
+    display: none;
 }
 
 .menu ul{
@@ -54,4 +69,15 @@ nav{
 
 .active{
     border-bottom: 3px solid #008066;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 814px) {
+    .menu{
+        display: block;
+    }
+    .burger-menu{
+        display: none;
+    }
 }
